@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Play.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Exit.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 526.0
+margin_bottom = 758.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 149.293
+margin_top = 51.3194
+margin_right = 218.293
+margin_bottom = 65.3194
+rect_scale = Vector2( 3, 3 )
+size_flags_horizontal = 3
+text = "BREAKOUT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 158.153
+margin_top = 213.831
+margin_right = 229.153
+margin_bottom = 244.831
+rect_scale = Vector2( 3, 3 )
+text = "PLAY"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 155.6
+margin_top = 507.514
+margin_right = 226.6
+margin_bottom = 538.514
+rect_scale = Vector2( 3, 3 )
+text = "EXIT"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 62.0331
+margin_top = 352.995
+margin_right = 474.033
+margin_bottom = 366.995
+text = "Déplacez la raquette avec les touches gauche et doite du clavier"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="Play" method="_on_Play_pressed"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_Exit_pressed"]

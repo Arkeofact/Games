@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Play.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Exit.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 526.0
+margin_bottom = 758.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 94.293
+margin_top = 51.3194
+margin_right = 207.293
+margin_bottom = 82.3194
+rect_scale = Vector2( 3, 3 )
+size_flags_horizontal = 3
+text = "BRAVO !
+Vous avez gagné !"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 158.0
+margin_top = 213.0
+margin_right = 229.0
+margin_bottom = 244.0
+rect_scale = Vector2( 3, 3 )
+text = "REPLAY"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 158.0
+margin_top = 500.0
+margin_right = 229.0
+margin_bottom = 531.0
+rect_scale = Vector2( 3, 3 )
+text = "EXIT"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="Play" method="_on_Play_pressed"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_Exit_pressed"]
